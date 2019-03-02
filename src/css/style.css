@@ -1,0 +1,159 @@
+body {
+    background-color: #fbfbfb;
+}
+
+body * {
+    font-family: "Segoe UI";
+    font-weight: 100!important;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.panel {
+    width: 80%;
+    height: fit-content;
+    padding: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    border: 1px solid #e2e2e2;
+    box-shadow: rgba(0,0,0,0.2) 0px 4px 16px 3px;
+}
+
+@media only screen and (min-width: 768px){
+    .panel{
+        width: 614px;
+    }
+}
+
+.visible {
+    visibility: visible!important;
+    opacity: 1!important;
+}
+
+.successMessage {
+    color: green;
+}
+
+.errorMessage{
+    color: red;
+}
+
+#priceInput {
+    width: 70%;
+    margin: 4px 15%;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.button{
+    height: 32px;
+    width: 70%;
+    margin: 4px 15%;
+    border: none;
+    border-radius: 20px;
+    background-color: #5699d2;
+    color: white;
+    font-size: 20px;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: #1d3f72;
+}
+
+.button:disabled{
+    opacity: 0.6;
+}
+
+.popover {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+    padding: 16px;
+    border: 1px solid #e2e2e2;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity: 0;
+    background-color: #e2e2e2;
+    box-shadow: rgba(0,0,0,0.4) 0px 4px 16px 3px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+}
+
+#qrCodeContainer {
+    z-index: 3;
+}
+
+#qrCodeContainerOverlay {
+    z-index: 2;
+}
+
+#loader {
+    z-index: 5;
+    width: 144px;
+    height: 144px;
+    background-image: url("../assets/loader.svg");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    box-shadow: none;
+    border: none;
+}
+
+#loaderOverlay {
+    z-index: 4;
+}
+
+#displayedAmount {
+    font-size: 48px;
+    text-align: center;
+    color: #1d3f72;
+}
+
+#messageContainer{
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+#qrCode {
+    height: fit-content;
+    width: fit-content;
+}
+
+#closeButton {
+    position: absolute;
+    top: -36px;
+    right: -36px;
+    height: 32px;
+    width: 32px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 16px;
+    background-image: url("../assets/close.svg");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#closeButton:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
