@@ -32,11 +32,11 @@ body * {
 }
 
 .successMessage {
-    color: green;
+    color: darkgreen;
 }
 
 .errorMessage{
-    color: red;
+    color: darkred;
 }
 
 #priceInput {
@@ -66,13 +66,15 @@ body * {
     opacity: 0.6;
 }
 
-.popover {
+.popover_custom {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     height: fit-content;
-    width: fit-content;
+    width: 70%;
+    min-width: 234px;
+    max-width: 576px;
     margin: auto;
     padding: 16px;
     border: 1px solid #e2e2e2;
@@ -83,7 +85,7 @@ body * {
     box-shadow: rgba(0,0,0,0.4) 0px 4px 16px 3px;
 }
 
-.overlay {
+.overlay_custom {
     position: absolute;
     top: 0;
     left: 0;
@@ -120,12 +122,6 @@ body * {
     z-index: 4;
 }
 
-#displayedAmount {
-    font-size: 48px;
-    text-align: center;
-    color: #1d3f72;
-}
-
 #messageContainer{
     visibility: hidden;
     opacity: 0;
@@ -133,9 +129,16 @@ body * {
     font-size: 24px;
 }
 
+#displayedAmount {
+    font-size: 48px;
+    text-align: center;
+    color: #1d3f72;
+}
+
 #qrCode {
     height: fit-content;
     width: fit-content;
+    margin: 0 auto;
 }
 
 #closeButton {
