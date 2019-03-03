@@ -16,13 +16,13 @@ body * {
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
-    border: 1px solid #e2e2e2;
-    box-shadow: rgba(0,0,0,0.2) 0px 4px 16px 3px;
 }
 
 @media only screen and (min-width: 768px){
     .panel{
         width: 614px;
+        border: 1px solid #e2e2e2;
+        box-shadow: rgba(0,0,0,0.2) 0px 4px 16px 3px;
     }
 }
 

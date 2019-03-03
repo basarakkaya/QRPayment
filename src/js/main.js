@@ -8,10 +8,11 @@ function createQR(QRdata, price) {
     });
     
     qr.makeCode(QRdata);
-
+    
+    $('#displayedAmount')[0].innerText = price + " ₺";
+    
     $('#qrCodeContainer').addClass("visible");
     $('#qrCodeContainerOverlay').addClass("visible");
-    $('#displayedAmount')[0].innerText = price + " ₺";
     $('#request-payment')[0].removeAttribute("disabled");
 
     window.localStorage.setItem('qrdata', 
